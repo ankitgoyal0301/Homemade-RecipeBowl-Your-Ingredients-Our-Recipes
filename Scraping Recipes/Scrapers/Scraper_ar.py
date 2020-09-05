@@ -14,9 +14,9 @@ recipe_intructions = []
 
 recipe_count = 1
 
-for i in range(2,3):# 417):
+for i in range(2,4):# 417):
     
-    print("Page "+str(i)+" scraping started!!")
+    print("Page "+str(i)+" scraping started!!!")
     
     url = base_url + str(i)
     req = Request(url, headers={'User-Agent':'Mozilla/5.0'})
@@ -59,17 +59,18 @@ for i in range(2,3):# 417):
     
         # Image
         temp_img = page_soup_recipe.find("div", { "class" : "docked-sharebar-content-container" })
-        # temp_img = temp_img.find("div",{"class" : "container-full-width template-two-col with-sidebar-right karma-below-banner karma-site-container recipe-wrapper"})
-        # temp_img = temp_img.find("div",{"class" : "recipe-container two-col-container"})
         temp_img = temp_img.find("div",{"class" : "image-container"})
-        # temp_img = temp_img.find("div",{"class" : "component lazy-image lazy-image-udf lead-media padding-24-bottom ugc-photos-link aspect_3x4 cache-only align-default rendered image-loaded"})
         temp_img = temp_img.find("div")
         
         recipe_img_links.append(temp_img["data-src"])
         
+        # Done with the recipe
         print("Recipe "+str(recipe_count)+" Scrapped")
         recipe_count += 1
         
+        print("Page "+recipe(i)+" Scraped!!!")
+         
+# Storing Dataframe to CSV
 dataset_ar = pd.DataFrame(list(zip(recipe_titles, recipe_ingredients, recipe_intructions, recipe_img_links)), 
                columns =['Recipe_name', 'Recipe_ingredients', 'Recipe_instructions', 'Recipe_img_link'])
 
