@@ -6,3 +6,7 @@
 - Divyanshu Garg
 - Anish Aggarwal
 - Krish Garg
+
+## Documentation:
+
+[Minor Project Group-10](https://docs.google.com/document/d/1RrfC8_39qhl3yiDTIkw2hkWz5Cv0pY3DGt6Vueu_kZ0/edit)
