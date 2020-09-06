@@ -13,6 +13,6 @@
 
 ## WorkFlow:
 
-- Scraping Recipes from various websites. Below is the list of all the websites used:
+- Scraping Recipes with pictures from following websites:
   - [All Recipes](https://www.allrecipes.com/)
   - [Epicurious](https://www.epicurious.com/)
