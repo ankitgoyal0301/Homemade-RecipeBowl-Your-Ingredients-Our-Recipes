@@ -4,6 +4,7 @@ from urllib.request import Request,urlopen
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 import numpy as np
+import json 
 
 base_url = 'https://www.allrecipes.com/recipes/?page='
 
@@ -12,9 +13,11 @@ recipe_img_links = []
 recipe_ingredients = []
 recipe_intructions = []
 
+recipes_dict = dict()
+
 recipe_count = 1
 
-for i in range(2,4):# 417):
+for i in range(2, 3):# 417):
     
     print("Page "+str(i)+" scraping started!!!")
     
@@ -63,15 +66,34 @@ for i in range(2,4):# 417):
         temp_img = temp_img.find("div")
         
         recipe_img_links.append(temp_img["data-src"])
-        
+
+        # Data to be written 
+        dictionary ={ 
+            "title" : recipe_titles[recipe_count], 
+            "ingredients" : recipe_ingredients[recipe_count], 
+            "instructions" : recipe_intructions[recipe_count], 
+            "picture_link" : recipe_img_links[recipe_count]
+        }
+
         # Done with the recipe
         print("Recipe "+str(recipe_count)+" Scrapped")
         recipe_count += 1
+
+        # Adding to recipe_dict
+        recipe_dict[recipe_count] = dictionary
         
     print("Page "+str(i)+" Scraped!!!")
          
-# Storing Dataframe to CSV
+# Storing Dataframe to JSON file format for training
+# Serializing json  
+json_object = json.dumps(dictionary, indent = 4) 
+  
+# Writing to dataset_ar.json 
+with open("dataset_ar.json", "w") as outfile: 
+    outfile.write(json_object)
+
+# Storing in CSV File
 dataset_ar = pd.DataFrame(list(zip(recipe_titles, recipe_ingredients, recipe_intructions, recipe_img_links)), 
-               columns =['Recipe_name', 'Recipe_ingredients', 'Recipe_instructions', 'Recipe_img_link'])
+               columns =['title', 'ingredients', 'instructions', 'picture_link'])
 
 dataset_ar.to_csv('./Datasets/dataset_ar.csv')
