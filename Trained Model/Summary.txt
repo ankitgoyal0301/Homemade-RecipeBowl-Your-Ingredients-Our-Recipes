@@ -1,2 +1,6 @@
-Trained Mode 20 Epochs: Loss: 0.23-0.25
-Trained Model (20-700-rmsprop): Loss: 0.19 Accuracy:0.91-0.93
+Trained Mode 20 Epochs: 
+Loss: 0.23-0.25
+
+Trained Model (20-700-rmsprop): 
+Loss: 0.19 Accuracy:0.91-0.93
+Early Stopping after 18th Epoch.
