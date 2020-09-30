@@ -7,5 +7,12 @@ Accuracy:0.91-0.93
 Early Stopping after 18th Epoch.
 
 Trained Model (500-1500-rmsprop): 
-Loss: 0.225 Accuracy:0.927
+Loss: 0.225 
+Accuracy:0.927
 Early Stopping after 21th Epoch.
+
+Trained Model (500-1500-rmsprop): 
+Loss: 0.2201
+Accuracy:0.9296
+Early Stopping after 41th Epoch.
+
