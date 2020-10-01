@@ -11,8 +11,19 @@ Loss: 0.225
 Accuracy:0.927
 Early Stopping after 21th Epoch.
 
-Trained Model (500-1500-rmsprop): 
+Trained Model (500-1500-Adam): 
 Loss: 0.2201
 Accuracy:0.9296
+Learning Rate: 0.001
 Early Stopping after 41th Epoch.
 
+Trained Model (20-1500-Adam): 
+Loss: 0.2367
+Accuracy:0.9249
+Learning Rate: 0.0005
+
+Trained Model (500-1500-Adam): 
+Loss: 0.2156
+Accuracy:0.9311
+Learning Rate: 0.0005
+Early Stopping after 45th Epoch.
