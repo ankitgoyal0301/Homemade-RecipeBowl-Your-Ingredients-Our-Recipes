@@ -7,7 +7,7 @@
 
 - Divyanshu Garg - 18103035
 - Ankit Goyal - 18103018
-- Krish Garg - 18103026
+- Krish Garg - 18103027
 - Anish Agarwal - 18103039
 
 ## Documentation:
