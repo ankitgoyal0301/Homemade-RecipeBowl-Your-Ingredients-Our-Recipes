@@ -14,6 +14,10 @@
 
 [Homemade RecipeBowl - Documentation](https://docs.google.com/document/d/1m4HwRRv36_pwn7cS87VdmaX4Fl8op--G-5P0T7AZiQU/edit)
 
+## Website Snapshot:
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Videos/Project%20Demo%20gif%201.gif" alt="Input" width="100%" height="auto"> 
+
 ## Instructions:
 
 ### For running the Frontend in React:
@@ -59,11 +63,11 @@ Our objective is to create an application that will assist an end-user to explor
 
 **WORKPLAN:**
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Flow Chart 1](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Flow%20chart%201.png)
 
 Fetching Recipes
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Flow Chart 2](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Flow%20chart%202.png)
 
 Finding Caloric values of Recipes from images
 
@@ -171,11 +175,11 @@ The deliverable will be an application to assist an end-user in order to explore
 
 **Week 8** : (28 September 2020 - 4 October 2020)
 
-**Scraping Websites:**
+**Training Deep Learning Model on DGX's GPU:**
 
 - Trained and tested our model on PEC&#39;s DGX GPU using docker and Teamviewer and extracted the following models:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Model's Perfromance Table](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Models%20Performance%20Table.PNG)
 
   - Batch Size = 64
   - Loss Function = sparse\_categorical\_crossentropy
