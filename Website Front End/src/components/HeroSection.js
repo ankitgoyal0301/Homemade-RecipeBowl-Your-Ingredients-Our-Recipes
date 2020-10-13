@@ -28,17 +28,17 @@ function HeroSection() {
       );
 
     });
-    
+   
   }, []);
 
-  
  
-  
+ 
+ 
   return (
 
     <div className='hero-container'>
       <video src='/videos/video.mp4' autoPlay loop muted />
-
+     
       <h1>Your Ingredients</h1>
       <h1>Our Recipes!</h1>
 
@@ -68,27 +68,25 @@ function HeroSection() {
         >
           BY COUSINE
         </Button>
-        </div>
+      </div>
 
-        <div className='box'>      
+         
 
-
-        <form  action="/" method="post" target="_blank">
-    
-            <input type="text" name="ingredients" placeholder="Ingredients" />
-            <button type="submit"> Go </button>
+        <form className="box" action="/" method="post" target="_blank">
+   
+            <input type="text" name="ingredients" placeholder="Ingredients..." />
+            <button type="submit"> Submit </button>
 
         </form>
 
-        
-            <div className='hero-container-2'>
-            
-              <p>The current time is {currentTime.author}.</p>
-              <p>The current time is {currentTime.title}.</p>
-            </div>
-          
 
+
+       
+      <div className='hero-container-2'>
+     
+       
       </div>
+
     </div>
   );
 }

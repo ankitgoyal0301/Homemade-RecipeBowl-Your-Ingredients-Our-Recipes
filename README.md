@@ -14,6 +14,28 @@
 
 [Homemade RecipeBowl - Documentation](https://docs.google.com/document/d/1m4HwRRv36_pwn7cS87VdmaX4Fl8op--G-5P0T7AZiQU/edit)
 
+## Instructions:
+
+### For running the Frontend in React:
+
+#### Create a **new folder** for react frontend:
+
+- Installing npm: $npm install -g create-react-app
+- Creating react project: $create-react-app \&lt;project\_name\_all\_in\_lower\_case\&gt;
+- Copy (by replacing) all the files in the &quot;Website Front End&quot; folder into the newly created react project folder.
+- Run the backend server (given below) in a separate command prompt.
+- Activating the environment, in &quot;Website Front End\api&quot; folder: $venv\Scripts\activate
+- Return to parent folder, i.e., react project folder: $cd ..
+- Running react project: $npm start
+
+### For running the Backend server in Flask:
+
+#### In **&quot;Website Front End\api&quot;** folder:
+
+- Creating virtual environment, i.e. venv, : $python -m venv venv (replace already present venv folder in &quot;Website Front End\api&quot;, if prompted)
+- Activating environment : $venv\Scripts\activate
+- Running flask file: $flask run --no-debugger
+
 
 ## Project Synopsis:
 

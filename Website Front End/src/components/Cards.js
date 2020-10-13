@@ -7,47 +7,49 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>Check Out These Fabulous Cuisines!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
-          
+
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
+              src='images/i1.png'
+              text='This is dummy card as of now. Further functionality will be added soon'
+              label='NORTH INDIAN'
+              path='/services'
+            />
+            <CardItem
+              src='images/i2.png'
+              text='This is dummy card as of now. Further functionality will be added soon'
+              label='SOUTH INDIAN'
+              path='/services'
+            />
+          </ul>
+         
+          <ul className='cards__items'>
+            <CardItem
+              src='images/i4.png'
+              text='This is dummy card as of now. Further functionality will be added soon'
+              label='CHINESE'
               path='/services'
             />
 
             <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
+              src='images/i3.png'
+              text='This is dummy card as of now. Further functionality will be added soon'
+              label='ITALIAN'
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
+              src='images/i5.png'
+              text='This is dummy card as of now. Further functionality will be added soon'
+              label='CARIBBEAN'
               path='/sign-up'
             />
           </ul>
 
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
-            />
-          </ul>
-          
+         
+         
         </div>
       </div>
     </div>

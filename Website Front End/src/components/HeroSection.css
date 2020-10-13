@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 video {
   object-fit: cover;
   opacity: 0.85;
@@ -24,8 +28,10 @@ video {
   color: #fff;
   font-size: 90px;
   margin-top: -50px;
-  padding: -100px;
+  margin-bottom: 40px;
+  padding: -50px;
 }
+
 
 .hero-container > p {
   margin-top: 0px;
@@ -47,16 +53,52 @@ video {
     'Lucida Sans', Arial, sans-serif;
 }
 
-.box {
-  margin-top: 50px;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transform: translate(-50%, -50%);
 
 
+input[type="text"]
+{
+  top: 30px;
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: .5s;
+  background: #fff;
+  width: 550px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+button[type="submit"]
+{
+  font-size: 20px;
+  top: 30px;
+  position: relative;
+  border-radius: 0 25px 25px 0;
+  background: #ffc107;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 25px;
+  
+  
+}
+
+button[type="submit"]:hover
+{
+  background: #de8c18;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 25px;
+  
 }
 
 .hero-btns {
@@ -78,6 +120,24 @@ video {
     font-size: 0px;
     margin-top: -150px;
   }
+
+  button[type="submit"]
+  {
+    font-size: 20px;
+    top: 29.5px;
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    background: #ffc107;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 25px;
+    
+    
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -98,4 +158,34 @@ video {
   .btn {
     width: 100%;
   }
+
+  input[type="text"]
+  {
+    top: 30px;
+    position: relative;
+    left: 10%;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px;
+  }
+
+  button[type="submit"]
+  {
+
+    
+    font-size: 20px;
+    top: 30px;
+    position: relative;
+    border-radius: 25px;
+
+  }
+
+
 }
