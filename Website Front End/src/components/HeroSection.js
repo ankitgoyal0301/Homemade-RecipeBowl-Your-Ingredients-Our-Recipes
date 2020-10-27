@@ -30,6 +30,7 @@ import Cards from './Cards';
 //         }
 //       );
 
+<<<<<<< HEAD
 //     });
     
 //   }, []);
@@ -111,6 +112,70 @@ class HeroSection extends Component {
 
   //render called again with updated values
   
+=======
+    });
+   
+  }, []);
+
+ 
+ 
+ 
+  return (
+
+    <div className='hero-container'>
+      <video src='/videos/video.mp4' autoPlay loop muted />
+     
+      <h1>Your Ingredients</h1>
+      <h1>Our Recipes!</h1>
+
+      <p>How do you want to search?</p>
+
+      <div className='hero-btns'>
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+        >
+          BY INGREDIENTS
+        </Button>
+
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+        >
+          BY IMAGE
+        </Button>
+
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+        >
+          BY COUSINE
+        </Button>
+      </div>
+
+         
+
+        <form className="box" action="/" method="post" target="_blank">
+   
+            <input type="text" name="ingredients" placeholder="Ingredients..." />
+            <button type="submit"> Submit </button>
+
+        </form>
+
+
+
+       
+      <div className='hero-container-2'>
+     
+       
+      </div>
+
+    </div>
+  );
+>>>>>>> f03c7ec8a520ebac7a3371bf3cf158a696559988
 }
 
 export default HeroSection;
