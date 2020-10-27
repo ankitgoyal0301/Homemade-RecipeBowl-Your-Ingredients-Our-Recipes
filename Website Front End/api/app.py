@@ -202,18 +202,19 @@ posts = [
 app = Flask(__name__)
 
 ans = dict()
+ans[0] = []
 
-@app.route('/', methods = ["POST"])
+@app.route('/', methods = ["POST", "GET"])
 def home():
 
     print("Running...")
 
-    if request.method == "POST":        
+    if request.method == "POST":
 
         def generate_combinations(model, ingredients_list):
             recipe_length = 4000
             try_letters = ingredients_list
-            try_temperature = [0.6, 1.0, 0.8, 0.4, 0.2]
+            try_temperature = [0.6, 1.0, 0.8, 0.4, 0.2, 0.3, 0.5]
 
             for letter in try_letters:
                 for temperature in try_temperature:
@@ -270,11 +271,12 @@ def home():
                     ingredients = '\n'.join([ingredient for ingredient in ingredients])
 
                     # Printing Stuff
-                    ans['author'] = title[2:]
-                    ans['title'] = ingredients
-                    ans['content'] = recipe
-                    ans['date_posted'] = 'April 20, 2018'
-                    break
+                    # ans['author'] = title[2:]
+                    # ans['title'] = ingredients
+                    # ans['content'] = recipe
+                    # ans['date_posted'] = 'April 20, 2018'
+                    # break
+                    ans[0].append({'author':title[2:], 'title': ingredients,'content': recipe, 'date_posted': 'April 20, 2018'})
 
                     # print(f'Attempt: "{letter}" + {temperature}')
                     # print('-----------------------------------')
@@ -296,7 +298,7 @@ def home():
 
         generate_combinations(model_simplified, ingredients_list)
 
-        return "Return"
+        return ans
 
 
 @app.route('/second', methods = ["GET"])

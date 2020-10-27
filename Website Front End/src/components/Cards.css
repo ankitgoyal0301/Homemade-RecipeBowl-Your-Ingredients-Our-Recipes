@@ -1,16 +1,50 @@
 .cards {
-  padding: 4rem;
+  padding: 2rem;
   background: #fff;
 }
 
-h1 {
+h2 {
   text-align: center;
+  font-size: 20px;
 }
+
+.card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+.img {
+    border-radius: 50%;
+    width: 500px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+}
+
+.details-container {
+    flex: 2;
+}
+
+.avatar-container {
+    flex-basis: 250px;
+}
+
+
+
 
 .cards__container {
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  flex: 0 0 100%;
+  flex-flow: column nowrap;
+  align-items: left;
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
@@ -25,13 +59,13 @@ h1 {
   margin-bottom: 24px;
 }
 
-.cards__item {
+/*.cards__item {
   display: flex;
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
 }
-
+*/
 .cards__item__link {
   display: flex;
   flex-flow: column;
