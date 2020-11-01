@@ -30,7 +30,7 @@ import Cards from './Cards';
 //         }
 //       );
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //     });
     
 //   }, []);

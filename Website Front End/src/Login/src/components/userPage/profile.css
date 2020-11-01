@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+/* .profile {
+  width: 27em;
+  height: 40em;
+  //min-height: 44em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+  z-index: 99;
+} */
+.img{
+  z-index: 1;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  z-index: 99;
+  width: 80%;
+  height: 120%;/*500px;*/
+  z-index: 99;
+  padding: 17px 10px;
+  border: 100px;
+  margin-top: 20%;
+  top:0px;
+  left:10%;
+  //transition: transform 200ms ease-in-out;
+}
+
+.user {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 17px;
+
+  top:0px;
+  z-index: 100;
+}
+
+.header {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.header-content {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding:7px;
+}
+.city{
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: grey;
+  padding-bottom: 5px;
+}
+
+hr.fancy-line {
+    border: 0;
+    height: 1px;
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+hr.fancy-line, hr.fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 75%);
+}
+
+.bio{
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding:7px;
+  margin-top: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: 1.5;
+  color: #3b403d;
+}
+
+.button-css{
+  text-align: center;
+  margin: 20px;
+}
+
+
+.form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+  }
+
+input {
+  margin-top: 6px;
+  min-width: 18em;
+  height: 37px;
+  padding: 0px 10px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f3f3f3;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 31px;
+  transition: all 250ms ease-in-out;
+}
+
+.textArea{
+  margin-bottom: 20px;
+  min-width: 18em;
+  height: 37px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f3f3f3;
+  border: 0;
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+}
+
+.custom {
+    width: 147.42px !important;
+}
+
+.password-input{
+  margin: 5px;
+}
