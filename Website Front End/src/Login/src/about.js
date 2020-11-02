@@ -9,7 +9,6 @@ import Features from "./components/about/features";
 import Info from "./components/about/info";
 import Team from "./components/about/team";
 import "./about.css"
-import JsonData from './data/data.json';
 
 // function App() {
   //   return (
@@ -20,7 +19,6 @@ import JsonData from './data/data.json';
     // }
 
 function DashBoard(){
-  const [data, setData] = useState({landingPageData : JsonData});
 
     return (
       <div>
