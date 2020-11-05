@@ -7,6 +7,7 @@ function Register() {
   const [value, setValue] = useState({auth:"true"});
   const [success, setSuccess] = useState({auth:"false"});
 
+
 	var json;
 	async function handleSubmit(event) {
 		const url = '/register'
@@ -34,25 +35,29 @@ function Register() {
 	},[value])
 
   return (
-    <div className="base-container">
-    <div className="header">Register</div>
+    <div className="base-container4">
+    <div className="header4">Register</div>
     <form onSubmit={handleSubmit} action="javascript:void(0);" method="POST">
-      <div className="content">
-        <div className="image">
+      <div className="content4">
+        <div className="image4">
           <img src={loginImg} alt="img" />
         </div>
-        <div className="form">
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input type="text" name="username" placeholder="username" />
+        <div className="form4">
+          <div className="form-group4">
+            <label className="label4" htmlFor="username">Username</label>
+            <input className="input4" type="text" name="username" placeholder="username" />
           </div>
-          <div className="form-group">
-            <label htmlFor="username">Email</label>
-            <input type="email" name="email" placeholder="email" />
+          <div className="form-group4">
+            <label className="label4" htmlFor="username">Email</label>
+            <input className="input4" type="email" name="email" placeholder="email" />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="password" />
+          <div className="form-group4">
+            <label className="label4" htmlFor="password">Password</label>
+            <input className="input4" type="password" name="password" placeholder="password" />
+          </div>
+          <div className="form-group4">
+            <label className="label4" htmlFor="password">Confirm Password</label>
+            <input className="input4" type="password" name="confirm-password" placeholder="password" />
           </div>
         </div>
         <div>
@@ -63,7 +68,7 @@ function Register() {
   			</div>
       </div>
       <div className="footer">
-        <input className="btn" type="submit" value="Register" />
+        <button className="btn" type="submit">Register</button>
         {/*<button type="button" className="btn">
           Register
         </button>*/}

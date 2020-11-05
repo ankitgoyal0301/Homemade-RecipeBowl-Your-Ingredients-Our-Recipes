@@ -1,21 +1,22 @@
 //Custom Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-.App {
+.App3 {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
+
 }
 
-.App-logo {
+.App-logo3 {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+.App-header3 {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -26,7 +27,7 @@
   color: white;
 }
 
-.App-link {
+.App-link3 {
   color: #61dafb;
 }
 
@@ -40,17 +41,17 @@
 }
 
 //Login Main Container
-.login {
+.login3 {
   width: 27em;
-  height: 40em;
-  //min-height: 44em;
+  height: 45em;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
   position: relative;
   z-index: 99;
-  .container {
+  margin-bottom: 500px;
+  .container3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,17 +85,17 @@
     box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
 
     &.right {
-      right: -50%;
+      right: -40%;
       align-items: flex-end;
       &:hover {
-        right: -55%;
+        right: -45%;
       }
     }
     &.left {
-      right: 32%;
+      right: 40%;
       align-items: flex-start;
       &:hover {
-        right: 37%;
+        right: 45%;
       }
     }
 
@@ -109,7 +110,7 @@
 }
 
 //Button
-.btn {
+.btn3 {
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
@@ -133,40 +134,3 @@
   font-family: 'PT Sans', sans-serif;
 }
 
-.home,
-.services,
-.products,
-.sign-up {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.services {
-  background-image: url('/images/img-2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.products {
-  background-image: url('/images/img-1.jpg');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  background-image: url('/images/img-8.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}

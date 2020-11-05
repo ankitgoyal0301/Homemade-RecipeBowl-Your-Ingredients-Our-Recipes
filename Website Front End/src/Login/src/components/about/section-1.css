@@ -14,9 +14,8 @@ video {
   z-index: -1;
 }
 
-.hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 97vh;
+.new-container {
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,172 +28,19 @@ video {
 .website-name {
   color: #fff;
   font-size: 120px;
-  margin-top: -50px;
-  margin-bottom: 80px;
+  margin-top: -30px;
+  margin-bottom: 100px;
   padding: -50px;
   font-family: 'Work Sans', sans-serif;
 }
 
 
-.hero-container > p {
-  margin-top: 0px;
-  color: #fff;
-  font-size: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 20px;
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-
-.hero-container-2 > p {
-  margin-top: 0px;
-  color: #000000;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-
-input[type="text"]
-{
-  top: 30px;
-  position: relative;
-  display: inline-block;
-  font-size: 20px;
-  box-sizing: border-box;
-  transition: .5s;
-  background: #fff;
-  width: 550px;
-  height: 50px;
-  border: none;
-  outline: none;
-  padding: 0 25px;
-  border-radius: 25px 0 0 25px;
-}
-
-button[type="submit"]
-{
-  font-size: 20px;
-  top: 30px;
-  position: relative;
-  border-radius: 0 25px 25px 0;
-  background: #ffc107;
-  width: 150px;
-  height: 50px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0 25px;
-
-
-}
-
-button[type="submit"]:hover
-{
-  background: #de8c18;
-  width: 150px;
-  height: 50px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0 25px;
-
-}
-
-.hero-btns {
-  margin-top: 30px;
-}
-
-.hero-btns .btn {
-  margin: 6px;
-  width: 210px;
-  border-width: 3px;
-}
-
-.fa-play-circle {
-  margin-left: 4px;
-}
-
-@media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 0px;
-    margin-top: -150px;
-  }
-
-  button[type="submit"]
-  {
-    font-size: 20px;
-    top: 29.5px;
-    position: relative;
-    border-radius: 0 25px 25px 0;
-    background: #ffc107;
-    width: 150px;
-    height: 50px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0 25px;
-
-
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  .hero-container > h1 {
-    font-size: 0px;
-    margin-top: -100px;
-  }
-
-  .hero-container > p {
-    font-size: 30px;
-  }
-
-  .btn-mobile {
-    display: block;
-    text-decoration: none;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  input[type="text"]
-  {
-    top: 30px;
-    position: relative;
-    left: 10%;
-    display: inline-block;
-    font-size: 20px;
-    box-sizing: border-box;
-    background: #fff;
-    width: 400px;
-    height: 50px;
-    border: none;
-    outline: none;
-    padding: 0 25px;
-    border-radius: 25px;
-  }
-
-  button[type="submit"]
-  {
-
-
-    font-size: 20px;
-    top: 30px;
-    position: relative;
-    border-radius: 25px;
-
-  }
-}
 
 .tagline{
   color: #fff;
-  font-size: 60px;
+  font-size: 70px;
   margin-top: -50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: -50px;
   padding-bottom: 30px;
   font-family: 'Work Sans', sans-serif;

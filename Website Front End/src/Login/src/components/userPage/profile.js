@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./profile.css"
 import backImg from "./back-img.jpg"
 import userImg from "./user-img.png"
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Profile() {
   const[username, setUsername] = useState("");
@@ -32,10 +32,10 @@ function Profile() {
     }
     else{
       return (<form onSubmit={bioSetting} action="javascript:void(0);" method="POST">
-          <div className="form">
-          <div className="form-group">
-          <input type=" type" className="textArea center" name="paragraph_text" cols="50" rows="5"/>
-          <button type="submit" className="btn btn-outline-secondary center">Update bio</button>
+          <div className="form2">
+          <div className="form-group2">
+          <input type=" type" className="textArea2 center" name="paragraph_text" cols="50" rows="5"/>
+          <input type="submit" className="btn btn-outline-secondary center" value="Update bio" />
           </div>
         </div>
       </form>)
@@ -79,13 +79,13 @@ function Profile() {
     }
     else{
       return (<form onSubmit={passwordSetting} action="javascript:void(0);" method="POST">
-          <div className="form">
-          <div className="form-group">
-  				<input className="password-input" type="password" name="old-password" placeholder="old password" />
-  				<input onChange={updateNewPassword} className="password-input" type="password" name="new-password" placeholder="new password" />
-  				<input onChange={checkNewPassword} className="password-input" type="password" name="confirm-password" placeholder="confirm password" />
+          <div className="form2">
+          <div className="form-group2">
+  				<input className="input2 password-input2" type="password" name="old-password" placeholder="old password" />
+  				<input onChange={updateNewPassword} className="input2 password-input2" type="password" name="new-password" placeholder="new password" />
+  				<input onChange={checkNewPassword} className="input2 password-input2" type="password" name="confirm-password" placeholder="confirm password" />
           <div style={{margin:"auto", padding:"5px"}}>{passwordWrong === "true" ? <p style={{color:"red"}}>Password doesn't match.</p> : null}</div>
-          <button type="submit" className="btn btn-outline-secondary center">Update Password</button>
+          <input type="submit" className="btn btn-outline-secondary center" value="Update Password" />
           </div>
         </div>
       </form>)
@@ -93,25 +93,25 @@ function Profile() {
   }
 
   return (
-      <div>
-        <img src={backImg} alt="img"/>
-        <div className="container">
+      <div className="profile-container">
+        <img className="back-img" src={backImg} alt="img"/>
+        <div className="container2">
           <div>
-            <img className="user" src={userImg} alt="img"/>
-            <h2 className="header">ankit_0301</h2>
-            <p className="header-content">goyalankit3129@gmail.com</p>
-            <div className="city header-content">
-              <i className="city header-content fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
+            <img className="user2" src={userImg} alt="img"/>
+            <h2 className="header2">ankit_0301</h2>
+            <p className="header-content2">goyalankit3129@gmail.com</p>
+            <div className="city2 header-content2">
+              <i className="city2 header-content2 fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
               Chandigarh, India
             </div>
-            <div className="button-css">
+            <div className="button-css2">
               {<>{passwordFunction()}</>}
             </div>
             <hr className="fancy-line"/>
             <div className="bio">
               <p>{bio}</p>
             </div>
-            <div className="button-css">
+            <div className="button-css2">
               {<>{bioFunction()}</>}
             </div>
           </div>

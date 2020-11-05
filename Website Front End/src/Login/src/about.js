@@ -23,9 +23,7 @@ function DashBoard(){
     return (
       <div>
         <Router>
-          <div >
-            <Navbar/>
-          </div>
+          
 
           <div>
             <Section1/>
@@ -43,9 +41,7 @@ function DashBoard(){
             <Team/>
           </div>
 
-          <div>
-            <FooterContainer/>
-          </div>
+          
         </Router>
       </div>
     );

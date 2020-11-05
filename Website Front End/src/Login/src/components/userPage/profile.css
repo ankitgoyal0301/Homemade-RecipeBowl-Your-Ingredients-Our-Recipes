@@ -11,10 +11,18 @@
   position: relative;
   z-index: 99;
 } */
-.img{
+.profile-container {
+  height: 210vh;
+}
+
+.back-img {
+  margin-top: 0;
+}
+
+.img2{
   z-index: 1;
 }
-.container {
+.container2 {
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -24,7 +32,7 @@
   position: absolute;
   z-index: 99;
   width: 80%;
-  height: 120%;/*500px;*/
+  height: 160%;/*500px;*/
   z-index: 99;
   padding: 17px 10px;
   border: 100px;
@@ -34,7 +42,7 @@
   //transition: transform 200ms ease-in-out;
 }
 
-.user {
+.user2 {
   display: inline-block;
   width: 180px;
   height: 180px;
@@ -51,19 +59,19 @@
   z-index: 100;
 }
 
-.header {
+.header2 {
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   margin-bottom: 10px;
 }
-.header-content {
+.header-content2 {
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   padding:7px;
 }
-.city{
+.city2{
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   color: grey;
@@ -99,27 +107,27 @@ hr.fancy-line, hr.fancy-line:before {
   color: #3b403d;
 }
 
-.button-css{
+.button-css2{
   text-align: center;
   margin: 20px;
 }
 
 
-.form {
+.form2 {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   }
-  .form-group {
+  .form-group2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: fit-content;
   }
 
-input {
+.input2 {
   margin-top: 6px;
   min-width: 18em;
   height: 37px;
@@ -133,7 +141,7 @@ input {
   transition: all 250ms ease-in-out;
 }
 
-.textArea{
+.textArea2{
   margin-bottom: 20px;
   min-width: 18em;
   height: 37px;
@@ -146,10 +154,10 @@ input {
   transition: all 250ms ease-in-out;
 }
 
-.custom {
+.custom2 {
     width: 147.42px !important;
 }
 
-.password-input{
+.password-input2{
   margin: 5px;
 }

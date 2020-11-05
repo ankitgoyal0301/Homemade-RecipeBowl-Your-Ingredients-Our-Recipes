@@ -47,16 +47,12 @@ class App extends React.Component {
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
     return (
-      <div>
+      <div style={{paddingBottom:"13%"}}>
         <Router>
-          <div >
-            <Navbar/>
-          </div>
-
-          <div className="login App tc" style={{margin: "auto"}}>
-            <div className="container" ref={ref => (this.container = ref)}>
+          <div className="login3 App3 tc" style={{margin: "auto"}}>
+            <div className="container3" ref={ref => (this.container = ref)}>
             {isLogginActive && (
-              <Login containerRef={ref => (this.current = ref)} />
+              <Login style={{height:"40em"}} containerRef={ref => (this.current = ref)} />
             )}
             {!isLogginActive && (
               <Register containerRef={ref => (this.current = ref)} />
@@ -68,10 +64,6 @@ class App extends React.Component {
             containerRef={ref => (this.rightSide = ref)}
             onClick={this.changeState.bind(this)}
             />
-          </div>
-
-          <div style={{marginTop:"12%"}}>
-            <FooterContainer/>
           </div>
         </Router>
       </div>
