@@ -13,7 +13,10 @@
 ## Documentation:
 
 [Homemade RecipeBowl - Documentation](https://docs.google.com/document/d/1m4HwRRv36_pwn7cS87VdmaX4Fl8op--G-5P0T7AZiQU/edit)
-[ChefKoch Images Dataset](https://drive.google.com/drive/folders/1uNk_TbVd__8W8HoXop1uI_SNFiRy03ip?usp=sharing)
+
+[ChefKoch Images - Dataset](https://drive.google.com/drive/folders/1uNk_TbVd__8W8HoXop1uI_SNFiRy03ip?usp=sharing)
+
+[Cuisine Dataset - Dataset](https://drive.google.com/drive/folders/1hq0B1OVlEVXvA_ChwQVHGJD9vp7A5CKi?usp=sharing)
 
 ## Website Snapshot:
 
