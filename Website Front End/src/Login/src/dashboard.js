@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import "./components/Navbar.css";
 import { FooterContainer } from './containers/footer';
 import Profile from "./components/userPage/profile";
+import backImg from "./components/userPage/back-img.jpg"
 
 // function App() {
   //   return (
@@ -24,7 +25,7 @@ function DashBoard(){
             <Navbar/>
           </div>
 
-          <div style={{marginBottom:"700px"}}>
+          <div>
             <Profile/>
           </div>
 

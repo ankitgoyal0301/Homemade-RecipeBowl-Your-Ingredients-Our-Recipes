@@ -4,7 +4,8 @@ import { Button } from './Button';
 import './Navbar.css';
 import logo1 from './logo1.png';
 
-function Navbar() {
+function Navbar()
+{
 	const [click, setClick] = useState(false);
 	const [button, setButton] = useState(true);
 
@@ -12,38 +13,39 @@ function Navbar() {
 	const closeMobileMenu = () => setClick(false);
 
 	const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
+	    if (window.innerWidth <= 960) {
+	      setButton(false);
+	    } else {
+	      setButton(true);
+	    }
+	};
 
-  const useEffect = (() => {
-    showButton();
-  }, []);
+	const useEffect = (() => {showButton();}, []);
 
-  window.addEventListener('resize', showButton);
+  	window.addEventListener('resize', showButton);
+
+  	function logout() {
+  		localStorage.setItem("loggedIn", "false");
+		localStorage.setItem("username", "");
+		window.open("/","_self");
+  	}
 
 	return (
 		<>
 			<nav className="navbar">
 				<div className="navbar-container">
-
-
 					<a href="/">
-						      <div className="logo-image">
-						            <img src={logo1} alt="logo1"/>
-						      </div>
+						<div className="logo-image">
+							<img src={logo1} alt="logo1"/>
+				      	</div>
 					</a>
 					
-					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>						
-						RecipeBowl	
-					</Link>
+					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>RecipeBowl</Link>
 
 					<div className='menu-icon' onClick={handleClick}>
 						<i className={click ? 'fas fa-times' : 'fas fa-bars'} />
 					</div>
+
 					<ul className={click ? 'nav-menu active' : 'nav-menu'}>
 						<li className='nav-item'>
 							<Link to='/' className='nav-links' onClick={closeMobileMenu}>
@@ -57,23 +59,39 @@ function Navbar() {
 							</Link>
 						</li>
 
-						<li className='nav-item'>
-							<Link to='/dashboard' className='nav-links' onClick={closeMobileMenu}>
-								Dashboard
-							</Link>
-						</li>
+						{localStorage.getItem("loggedIn")==="true" ?
+							<li className='nav-item'>
+								<Link to='/dashboard' className='nav-links' onClick={closeMobileMenu}>
+									Dashboard
+								</Link>
+							</li> :
+
+							<li className='nav-item'>
+								<Link to='/sign_up' className='nav-links' onClick={closeMobileMenu}>
+									Dashboard
+								</Link>
+							</li>						
+						}
 
 
-
-						<li className='nav-item'>
-							<Link to='/sign_up' className='nav-links-mobile' onClick={closeMobileMenu}>
-								LOGIN
-							</Link>
-						</li>
-
+						{localStorage.getItem("loggedIn")==="true" ?
+							<li className='nav-item'>
+								<Link to='/sign_up' className='nav-links-mobile' onClick={closeMobileMenu}>
+									LOGOUT
+								</Link>
+							</li> :
+							<li className='nav-item'>
+								<Link to='/sign_up' className='nav-links-mobile' onClick={closeMobileMenu}>
+									LOGIN
+								</Link>
+							</li>
+						}
 					</ul>
 
-					{button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
+					{localStorage.getItem("loggedIn")==="true" ?
+						button && <Button linkTo='/' buttonStyle='btn--outline' onClick={logout}>LOGOUT</Button> :
+						button && <Button linkTo='/sign_up' buttonStyle='btn--outline'>LOGIN</Button>
+					}
 
 
 				</div>

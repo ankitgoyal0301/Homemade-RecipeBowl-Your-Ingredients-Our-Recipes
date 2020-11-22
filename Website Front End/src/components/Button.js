@@ -6,18 +6,32 @@ const STYLES = ['btn--primary', 'btn--outline']
 
 const SIZES = ['btn--medium', 'btn--large']
 
-export const Button = ( { children,	type, onClick, buttonStyle, buttonSize }) => {
+const FILL = ['btn--fill']
+
+export const Button = ( { children, type, onClick, buttonStyle, buttonSize, isSelected, linkTo }) =>{
 	const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
 	const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
-	return (
-		<Link to='/sign_up' className='btn-mobile'>
-			<button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
-				{children}
-			</button>
+	const checkFill = isSelected ? FILL[0] : FILL[0];
 
-
-		</Link>
-	)
+	if(linkTo==='/sign_up')
+	{
+		return (
+			<Link to='/sign_up' className='btn-mobile'>
+				<button className={`btn ${checkFill} ${checkButtonStyle} ${checkButtonSize} `} onClick={onClick} type={type}>{children}
+				</button>	
+			</Link>	
+		);
+	}
+	
+	else
+	{
+		return (
+			
+				<button className={`btn ${checkFill} ${checkButtonStyle} ${checkButtonSize} `} onClick={onClick} type={type}>{children}
+				</button>
+		);
+	}
+	
 };

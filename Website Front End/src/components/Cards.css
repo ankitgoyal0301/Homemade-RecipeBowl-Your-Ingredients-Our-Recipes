@@ -3,44 +3,101 @@
   background: #fff;
 }
 
-h2 {
+.header-new > h2 {
   text-align: center;
+  padding: .75em;
+  margin: auto;
+  font-size: 35px;
+}
+
+.header-new > p {
+  text-align: left;
+  padding: .5em;
+  padding-left: 2em;
+  margin: auto;
   font-size: 20px;
 }
 
-.card {
+.header-new > h3 {
+  text-align: left;
+  margin: auto;  
+  padding: .5em;
+  padding-left: 2em;
+  font-size: 20px;
+}
+
+.cards-container {
+
+}
+
+.card-new {
+    margin-left: 3%;
+    margin-top: 1.5%;
+    margin-right: 3%;
+    margin-bottom: 1.5%;
     background-color: white;
-    padding: 10px;
+    padding: 25px;
     border-radius: 5px;
-    min-height: 300px;
+    min-height: 400px;
 }
 
-.img {
-    border-radius: 50%;
-    width: 500px;
+.newclass {
+  text-align: center;
+  padding: .75em;
+  margin: auto;
+  font-size: 35px;
 }
 
-.row {
+.img-new {
+  margin-top: 18%;
+  border-radius: 10%;
+  height: 300px;
+  width: 600px;
+  vertical-align: center;
+}
+
+.row-new {
     display: flex;
     flex-wrap: wrap;
+    vertical-align: center;
 }
 
-.column {
+.column-new {
   flex: 1;
 }
 
-.details-container {
+.details-container-new {
     flex: 2;
 }
 
-.avatar-container {
-    flex-basis: 250px;
+.avatar-container-new {
+    flex-basis: 400px;
+    align-items: center;
+}
+
+hr.fancy-line {
+    border: 0;
+    height: 1px;
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;
+    top: 1px;
+}
+
+hr.fancy-line, hr.fancy-line:before {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 75%);
 }
 
 
 
 
-.cards__container {
+.cards__container-new {
   display: flex;
   flex: 0 0 100%;
   flex-flow: column nowrap;
@@ -50,12 +107,12 @@ h2 {
   margin: 0 auto;
 }
 
-.cards__wrapper {
+.cards__wrapper-new {
   position: relative;
   margin: 50px 0 45px;
 }
 
-.cards__items {
+.cards__items-new {
   margin-bottom: 24px;
 }
 
@@ -149,4 +206,34 @@ h2 {
   .cards__item {
     margin-bottom: 2rem;
   }
+}
+
+.heart {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  align-self: center;
+  background-repeat:no-repeat;
+  background-size:2900%;
+  background-position: left;
+  margin: auto;
+  margin-top: -6%;
+}
+.heart:hover {
+  background-position:right;
+}
+.heartclick {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  align-items: center;
+  
+  background-repeat: no-repeat;
+  background-size:2900%;
+  background-position: right;
+
+  margin: auto;
+  margin-top: -6%;
 }

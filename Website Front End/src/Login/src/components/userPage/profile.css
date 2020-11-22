@@ -12,7 +12,7 @@
   z-index: 99;
 } */
 .profile-container {
-  height: 210vh;
+  /* height: 500vh;  */
 }
 
 .back-img {
@@ -29,15 +29,16 @@
   background-color: #fff;
   box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
   border-radius: 4px;
-  position: absolute;
+  position: relative;
   z-index: 99;
   width: 80%;
-  height: 160%;/*500px;*/
+  /* height: 130%;/*500px;*/
   z-index: 99;
   padding: 17px 10px;
   border: 100px;
-  margin-top: 20%;
-  top:0px;
+  margin-top: -10%;
+  margin-bottom: 2%;
+  /* top:0px;  */
   left:10%;
   //transition: transform 200ms ease-in-out;
 }
@@ -160,4 +161,11 @@ hr.fancy-line, hr.fancy-line:before {
 
 .password-input2{
   margin: 5px;
+}
+
+.dashboard-favorites{
+  color:#333333;
+  font-size: 50px;
+  padding-top: 40px;
+  margin-top: 0px;
 }

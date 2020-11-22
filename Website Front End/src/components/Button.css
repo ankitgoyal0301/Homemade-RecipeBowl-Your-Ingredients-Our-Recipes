@@ -34,10 +34,17 @@
   font-size: 20px;
 }
 
+
+
 .btn--large:hover,
 .btn--medium:hover {
   transition: all 0.3s ease-out;
   background: #fff;
   color: #242424;
   transition: 250ms;
+}
+
+.btn--fill {
+  background: #fff;
+  color: #242424;
 }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+.testimonials {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f6f6f6;
+}
+
+.testimonial-user{
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: block;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 10%;
+
+  top:0px;
+  z-index: 100;
+}
+
+.back-color{
+  background-color: #fff;
+}
+
+.testimonial-head{
+  color:#333333;
+  font-size: 50px;
+  padding-top: 40px;
+  margin-top: 0px;
+}
+
+.testimonial-text {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #404040;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonial-backimg{
+  background-image: url("https://www.publicdomainpictures.net/pictures/130000/velka/gray-top-gradient-background.jpg");
+
+}

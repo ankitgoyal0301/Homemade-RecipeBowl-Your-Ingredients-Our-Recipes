@@ -31,7 +31,7 @@ hr.fancy-line {
     height: 1px;
 }
 hr.fancy-line:before {
-    top: -0.5em;
+    top: -1em;
     height: 1em;
 }
 hr.fancy-line:after {
