@@ -72,7 +72,7 @@ function Cards (props)
 
                     <div className='avatar-container-new'>
                         <div className='photo-new'>
-                            <img className='img-new grow' src={ele.date_posted === "image.jpg" ? image : ele.date_posted} alt="img"/>
+                            <img className='img-new grow' src={ele.date_posted === "image.jpg" ? localStorage.getItem('fileBase64') : ele.date_posted} alt="img"/>
                             <h3 style={{fontSize:"20px"}}> {ele.isFavorite === "false" ? "Do you like this?" : "Added to Your Favorite Recipes"}</h3>
                             <div onClick={() => toggle(ele)} className={ele.classname}></div>
                         </div>

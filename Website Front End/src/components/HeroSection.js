@@ -92,6 +92,15 @@ function HeroSection()
       }
      }
 
+     const getBase64 = (file) => {
+      return new Promise((resolve,reject) => {
+         const reader = new FileReader();
+         reader.onload = () => resolve(reader.result);
+         reader.onerror = error => reject(error);
+         reader.readAsDataURL(file);
+      });
+    }
+
      async function handleUploadImage(event)
      {
        if(ingInvalidInput === true){
@@ -105,6 +114,13 @@ function HeroSection()
 
           const data = new FormData();
           data.append('file', uploadInput.files[0]);
+
+          const file = uploadInput.files[0];
+          getBase64(file).then(base64 => {
+            localStorage["fileBase64"] = base64;
+            console.debug("file stored",base64);
+            console.log("file stored",base64);
+          });
 
           const response = await fetch('/image', {
                method: 'POST',
@@ -125,6 +141,11 @@ function HeroSection()
 
      async function handleChange (event)
      {
+       console.log(cuisine);
+       if(cuisine === "blank" || cuisine === ""){
+         setIngInvalidInput(true);
+       }
+       else{
         setIngInvalidInput(false);
         localStorage.setItem("recipe_list", JSON.stringify([]));
           setIsLoading(true);
@@ -144,6 +165,7 @@ function HeroSection()
           setRecipes(json[0]);
           localStorage.setItem("recipe_list", JSON.stringify(json[0]));
           setIsLoading(false);
+        }
      }
 
      function onClickSearchbox()
@@ -179,7 +201,8 @@ function HeroSection()
           {
                return (
                     <form onSubmit={handleChange} action="javascript:void(0);" method="POST">
-                              <select className='select-class' onChange={onCuisineChange} name="cars" id="cars">
+                              <select className='select-class' onChange={onCuisineChange} name="cars" id="cars" required>
+                                   <option value="blank" selected="selected">Choose a Cuisine</option>
                                    {cuisine_list.map(ele => (
                                         <option value={ele}>{ele}</option>
                                    ))}
@@ -193,6 +216,7 @@ function HeroSection()
      function updateState(new_state)
      {
           setInvalid(false);
+          setIngInvalidInput(false);
           setCurrState(new_state);
      }
 

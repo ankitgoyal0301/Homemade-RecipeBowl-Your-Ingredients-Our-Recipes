@@ -12,13 +12,13 @@ import Slider from 'infinite-react-carousel';
 function Testimonials() {
   return (
     <>
-      <div clasName="back-color">
+      <div className="back-color">
         <div className="center back-color">
           <h1 className="testimonial-head">Testimonials</h1>
           <hr className="fancy-line"/>
         </div>
         <div className="testimonial-backimg" style={{paddingTop:"4%",paddingBottom:"4%", backgroundColor:"#f6f6f6"}}>
-        <Slider dots autoplay={true} wheel={true}>
+        <Slider dots autoplay={true} wheel={true} autoplaySpeed={4000}>
           <div className="center">
             <h2 className="testimonial-text">Thank you for this amazing website, now I can make delicious recipes with whatever ingredients I have.</h2>
             <img className="testimonial-image" src={img1} alt="dog-profile"/><br/>
