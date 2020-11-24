@@ -204,16 +204,58 @@ VERY LARGE FLUCTUATIONS IN THE LOSS OVER CONSECUTIVE EPOCHS, SO NOT PREFERABLE
 
 ---
 
+**Week 10** : (12 October 2020 - 18 October 2020)
+
+**Developing the Website backend and Integrating with front end:**
+
+- Developing the website’s backend using the Flask framework of python.
+- Started integrating the frontend and the backend.
+- Continued with the frontend of the website.
+- Updated the Project SRS according to further scope of the project.
+
+---
+
+**Week 11** : (19 October 2020 - 25 October 2020)
+
+**Exploring Image-to-Recipe datasets and websites for scrapping (if required):**
+
+- Could not get the most diverse MIT dataset from the given portal (portal wasn’t working).
+- Tried exploring some other websites which could help us with the Image to Recipes training process.
+    - Chefkoch (has multiple images for many single recipes)
+- Started the scraping of the dataset
+
+---
+
+**Week 12** : (26 October 2020 - 1 November 2020)
+
+**Completed scrapping and started preparing model training code:**
+
+- Completed the scrapping process of ChefKoch website.
+- Started development of the model training code using CNNs for image identification and RNNs for recipe generation, and achieved an accuracy of about 93.56% using our ChefKoch scraped dataset.
+- Continued development of website by adding certain features to it(login page).
+- Started scraping websites to get dataset for Cuisine-to-Recipe.
+
+---
+
+**Week 13** : (2 November 2020 - 8 November 2020)
+
+**Further Developed the RecipeBowl Website:**
+
+- Developed the website’s front end using the React framework.
+- Added additional features/components like login page, user dashboard, favourite recipe feature, about us page.
+- Integrated front end components with each other.
+- Integrated front end with image-to-recipe feature and cuisine-to-recipe feature.
+
+---
 ## Future Plan
 
 **CURRENT BUGS / CHALLENGES:**
 
-- As of now for viewing the recipe output on submitting the ingredients, the website needs to be reloaded.
+- The Ingredients-to-Recipe generator sometimes produces irrelevant outputs, due to constraint on dataset size.
 
-**ADDITIONAL FUNCTIONALITY:**
+**FURTHER SCOPE:**
 
-- Enhancement of the frontend of the website.
-- Image to recipe functionality.
-- Cuisine to recipes functionality.
-- Login page.
-- Rating of recipe.
+- Expanding our dataset and improving the text generation model.
+- The Ingredients-to-recipe model can be further extended to image generation corresponding to the recipe generated.
+- A Post’s feed can be added to the website where people can add their recipes in the form of posts.
+- Discussion forum for Q/A among the users.

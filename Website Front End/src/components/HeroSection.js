@@ -22,7 +22,7 @@ function HeroSection()
      const [invalid, setInvalid] = useState(false);
      const [isLoading, setIsLoading] = useState(false);
      const [ingInvalidInput, setIngInvalidInput] = useState(false);
-     
+
 
      var btn1 = false;
      var btn2 = false;
@@ -30,7 +30,7 @@ function HeroSection()
 
     function hasNumber(myString) {
       return /\d/.test(myString);
-    }     
+    }
 
 
 
@@ -41,7 +41,7 @@ function HeroSection()
         }
         else{
             setIngInvalidInput(false);
-        
+
 
         localStorage.setItem("recipe_list", JSON.stringify([]));
 
@@ -63,7 +63,7 @@ function HeroSection()
           console.log(json);
 
           var temp1 = json[0];
-          
+
 
           // localStorage.setItem("recipe_list", JSON.stringify(json[0]));
           // setRecipes(temp1);
@@ -94,12 +94,14 @@ function HeroSection()
 
      async function handleUploadImage(event)
      {
+       if(ingInvalidInput === true){
         setIngInvalidInput(false);
+      }
         localStorage.setItem("recipe_list", JSON.stringify([]));
           setIsLoading(true);
           setInvalid(false);
           event.persist();
-          event.preventDefault();
+          // event.preventDefault();
 
           const data = new FormData();
           data.append('file', uploadInput.files[0]);
@@ -165,7 +167,7 @@ function HeroSection()
                     <div>
                        <form action="javascript:void(0);" onSubmit={handleUploadImage}>
                             <div>
-                                 <input className="custom-file-input" ref={(ref) => { setUploadInput(ref) }} type="file" accept="image/*"/>
+                                 <input className="custom-file-input" ref={(ref) => { setUploadInput(ref) }} type="file" accept="image/*" required/>
                                  <button className="hero-button2">Upload</button>
                             </div>
                        </form>

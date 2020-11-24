@@ -412,6 +412,8 @@ def home():
     ans = generate_combinations(model_simplified, ingredients_list)
     return ans
 
+imageCount = 1
+
 ## Image-to-Recipe
 @app.route('/image', methods=['POST'])
 def fileUpload():
@@ -497,7 +499,7 @@ def fileUpload():
     file = request.files['file']
     image = Image.open(file).convert('RGB')
 
-    image.save(os.getcwd() + "\\" + "../src/components/image.jpg")
+    # image.save(os.getcwd() + "\\" + "../src/components/image.jpg")
 
     transf_list = []
     transf_list.append(transforms.Resize(256))

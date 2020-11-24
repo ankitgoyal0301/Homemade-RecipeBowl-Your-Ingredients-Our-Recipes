@@ -43,7 +43,7 @@ function Profile() {
 
    useEffect(() => {},[email]);
    useEffect(() => {},[bio]);
-   useEffect(() => {},[recipes]); //This line leads to backend request infinite loop 
+   useEffect(() => {},[recipes]); //This line leads to backend request infinite loop
 
   function bioSetting(event){
     event.persist()
@@ -80,7 +80,7 @@ function Profile() {
       return (<form onSubmit={bioSetting} action="javascript:void(0);" method="POST">
           <div className="form2">
           <div className="form-group2">
-          <input type=" type" className="textArea2 center" name="paragraph_text" cols="50" rows="5"/>
+          <input type=" type" className="textArea2 center" name="paragraph_text" cols="50" rows="5" required/>
           <input type="submit" className="btn btn-outline-secondary center" value="Update bio" />
           </div>
         </div>
@@ -154,9 +154,9 @@ function Profile() {
       return (<form onSubmit={passwordSetting} action="javascript:void(0);" method="POST">
           <div className="form2">
           <div className="form-group2">
-  				<input className="input2 password-input2" type="password" name="old-password" placeholder="old password" />
-  				<input onChange={updateNewPassword} className="input2 password-input2" type="password" name="new-password" placeholder="new password" />
-  				<input onChange={checkNewPassword} className="input2 password-input2" type="password" name="confirm-password" placeholder="confirm password" />
+  				<input className="input2 password-input2" type="password" name="old-password" placeholder="old password" required/>
+  				<input onChange={updateNewPassword} className="input2 password-input2" type="password" name="new-password" placeholder="new password" minlength="6" required/>
+  				<input onChange={checkNewPassword} className="input2 password-input2" type="password" name="confirm-password" placeholder="confirm password" required/>
           <div style={{margin:"auto", padding:"5px"}}>{passwordWrong === "true" ? <p style={{color:"red"}}>Password doesn't match.</p> : null}</div>
 
           <div style={{margin:"auto", padding:"5px"}}>{oldPasswordCorrect === "false" ? <p style={{color:"red"}}>Old Password doesn't match.</p> : null}</div>

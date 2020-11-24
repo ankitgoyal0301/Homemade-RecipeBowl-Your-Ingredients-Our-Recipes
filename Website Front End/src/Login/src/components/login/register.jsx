@@ -76,19 +76,19 @@ function Register() {
         <div className="form4">
           <div className="form-group4">
             <label className="label4" htmlFor="username">Username</label>
-            <input className="input4" type="text" name="username" placeholder="username" />
+            <input className="input4" type="text" name="username" placeholder="username" required/>
           </div>
           <div className="form-group4">
             <label className="label4" htmlFor="username">Email</label>
-            <input className="input4" type="email" name="email" placeholder="email" />
+            <input className="input4" type="email" name="email" placeholder="email" required/>
           </div>
           <div className="form-group4">
             <label className="label4" htmlFor="password">Password</label>
-            <input onChange={updateNewPassword} className="input4" type="password" name="password" placeholder="password" />
+            <input onChange={updateNewPassword} className="input4" type="password" name="password" placeholder="password" required/>
           </div>
           <div className="form-group4">
             <label className="label4" htmlFor="password">Confirm Password</label>
-            <input onChange={checkNewPassword} className="input4" type="password" name="confirm-password" placeholder="password" />
+            <input onChange={checkNewPassword} className="input4" type="password" name="confirm-password" placeholder="password" required/>
           </div>
         </div>
         <div>

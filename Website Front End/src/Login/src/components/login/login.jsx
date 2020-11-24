@@ -61,11 +61,11 @@ function Login()
 				<div className="form4">
 				  <div className="form-group4">
 					<label className="label4" htmlFor="username">Username</label>
-					<input className="input4" type="text" name="username" placeholder="username" />
+					<input className="input4" type="text" name="username" placeholder="username" required/>
 				  </div>
 				  <div className="form-group4">
 					<label className="label4" htmlFor="password">Password</label>
-					<input className="input4" type="password" name="password" placeholder="password" />
+					<input className="input4" type="password" name="password" placeholder="password" required/>
 				  </div>
 				</div>
 				<div>
