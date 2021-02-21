@@ -60,6 +60,24 @@
   z-index: 100;
 }
 
+.user2:hover{
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 17px;
+
+  top:0px;
+  z-index: 100;
+  opacity: 0.65;
+}
+
 .header2 {
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
@@ -168,4 +186,16 @@ hr.fancy-line, hr.fancy-line:before {
   font-size: 50px;
   padding-top: 40px;
   margin-top: 0px;
+}
+
+.isSelected{
+  background-color: #F5F5F5;
+}
+
+.isNotSelected{
+  cursor: pointer;
+}
+
+.isNotSelected:hover{
+  background-color: #FaFaFa;
 }

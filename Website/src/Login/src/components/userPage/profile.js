@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Cards from "../../../../components/Cards";
+import Posts from "../../../../components/feed/posts";
 import "./profile.css"
 import backImg from "./back-img.jpg"
 import userImg from "./user-img.png"
@@ -7,6 +8,7 @@ import userImg from "./user-img.png"
 
 var login = localStorage.getItem('loggedIn');
 var userName = localStorage.getItem('username');
+var tempImg = "";
 
 function Profile() {
   const[username, setUsername] = useState(userName);
@@ -19,31 +21,95 @@ function Profile() {
 
   const[oldPasswordCorrect, setOldPasswordCorrect] = useState("true");
 
+  const[fetched, setFetched] = useState("false");
+
   const [recipes, setRecipes] = useState([]);
+  const [image, setImage] = useState("");
 
-  useEffect(() => {
+  const [imageOption, setImageOption] = useState("false");
+  const [uploadInput, setUploadInput] = useState();
 
-    async function fetchUserDetails(){
-      const response = await fetch('/profile-stats', {
-  		  method: "POST",
-  		  headers: {
-  		    'Content-type': 'application/json'
-  		  },
-  		  body: JSON.stringify(username),
-  		});
+  const[fetched1, setFetched1] = useState("false");
+  const[posts, setPosts] = useState([]);
 
-      	var temp = await response.json();
-        setEmail(temp.email);
-        setBio(temp.bio);
-        setRecipes(temp.fav_recipes);
+  async function fetchPosts(){
+    //console.log("Ankit");
+    const response = await fetch('/fetch-posts', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(userName),
+    });
+
+      var temp = await response.json();
+      var temp2= []
+      for(var i=0;i<temp[0].length;++i){
+        if(temp[0][i].username === userName){
+          temp2.push(temp[0][i]);
+        }
+      }
+      setPosts(temp2);
+      console.log(temp[0]);
+  }
+
+  function fetchPostsCall(){
+    if(fetched1 === "false"){
+      fetchPosts();
+      setFetched1("true");
     }
+  }
 
-    fetchUserDetails();
-   });
+
+
+  // useEffect(() => {
+  //
+  //   async function fetchUserDetails(){
+  //     const response = await fetch('/profile-stats', {
+  // 		  method: "POST",
+  // 		  headers: {
+  // 		    'Content-type': 'application/json'
+  // 		  },
+  // 		  body: JSON.stringify(username),
+  // 		});
+  //
+  //     	var temp = await response.json();
+  //       setEmail(temp.email);
+  //       setBio(temp.bio);
+  //       setRecipes(temp.fav_recipes);
+  //   }
+  //
+  //   fetchUserDetails();
+  //  });
+
+  async function fetchUserDetails(){
+    //console.log("Ankit");
+    const response = await fetch('/profile-stats', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(username),
+    });
+
+      var temp = await response.json();
+      setEmail(temp.email);
+      setBio(temp.bio);
+      setRecipes(temp.fav_recipes);
+      setImage(temp.image);
+  }
+
+  function fetchUserDetailsCall(){
+    if(fetched === "false"){
+      fetchUserDetails();
+      setFetched("true");
+    }
+  }
 
    useEffect(() => {},[email]);
    useEffect(() => {},[bio]);
    useEffect(() => {},[recipes]); //This line leads to backend request infinite loop
+   useEffect(() => {},[imageOption]);
 
   function bioSetting(event){
     event.persist()
@@ -168,14 +234,62 @@ function Profile() {
     }
   }
 
+  const getBase64 = (file) => {
+   return new Promise((resolve,reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+      reader.readAsDataURL(file);
+   });
+ }
+
+  async function newImage(event){
+    event.persist();
+    // event.preventDefault();
+    const data = new FormData();
+    data.append('file', uploadInput.files[0]);
+
+    const file = uploadInput.files[0];
+
+    getBase64(file).then(base64 => {
+      setImage(base64);
+      const response = fetch('/user-image-change', {
+       method: "POST",
+       headers: {
+         'Content-type': 'application/json'
+       },
+       body: JSON.stringify({Image:base64, Username:username}),
+      });
+      console.debug("file stored",base64);
+      //console.log("file stored",base64);
+    });
+
+    setImageOption("false");
+  }
+
+  function changeUserImage(){
+    imageOption==="false" ? setImageOption("true") : setImageOption("false");
+  }
+
+  const[selected,setSelected] = useState("left");
+  //useEffect(() => {},[selected]);
+
   return (
       <div className="profile-container">
+        <div>{<>{fetchUserDetailsCall()}</>}</div>
         <div>
           <img className="back-img" src={backImg} alt="img"/>
         </div>
         <div className="container2">
           <div>
-            <img className="user2" src={userImg} alt="img"/>
+            <img className="user2" src={image} alt="img" onClick={changeUserImage}/>
+            {imageOption === "true" ?
+              <form action="javascript:void(0);" onSubmit={newImage}>
+              <div className="tc" style={{marginLeft:"100px"}}>
+                <input className="btn btn-outline-secondary" ref={(ref) => { setUploadInput(ref) }} type="file" accept="image/*" required />
+                <button className="btn btn-outline-secondary">Upload</button>
+              </div></form> :
+              null }
             <h2 className="header2">{username}</h2>
             <p className="header-content2">{email}</p>
             <div className="city2 header-content2">
@@ -196,13 +310,32 @@ function Profile() {
         </div>
 
         <div>
-          <h1 className="tc dashboard-favorites">My Favorites</h1>
-          <hr className="fancy-line" style={{marginBottom:"1%"}}/>
+          {<>{fetchPostsCall()}</>}
         </div>
 
+        {selected === "left" ?
         <div>
-            {recipes.length === 0 ? <h1 className="tc" style={{padding:"4%",paddingTop:"3%",color:"#202020"}}>You have no Favorite Recipes yet!</h1> : <Cards recipes={recipes}/>}
-        </div>
+          <div style={{height:"100px"}}>
+            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 isSelected shadow-5"><h1 className="tc dashboard-favorites">My Favorites</h1></div>
+            <div onClick={() => setSelected("right")} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 isNotSelected"><h1 className="tc dashboard-favorites">My Posts</h1></div>
+          </div>
+
+          <div style={{width:"97%",margin:"auto", marginTop:"4%"}}>
+              {recipes.length === 0 ? <h1 className="tc" style={{padding:"4%",paddingTop:"3%",color:"#202020"}}>You have no Favorite Recipes yet!</h1> : <Cards recipes={recipes}/>}
+          </div>
+        </div>:
+
+        <div>
+          <div style={{height:"100px"}}>
+            <div onClick={() => setSelected("left")} className="col-xs-6 col-sm-6 col-md-6 col-lg-6 isNotSelected"><h1 className="tc dashboard-favorites">My Favorites</h1></div>
+            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 isSelected shadow-5"><h1 className="tc dashboard-favorites">My Posts</h1></div>
+          </div>
+
+
+          <div style={{width:"90%", alignContent:"center", margin:"auto", marginTop:"4%"}}>
+              {posts.length === 0 ? <h1 className="tc" style={{padding:"4%",paddingTop:"3%",color:"#202020"}}>You have no Posts yet!</h1> : <Posts posts={posts} hide="true"/>}
+          </div>
+        </div>}
 
       </div>
   );

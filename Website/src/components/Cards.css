@@ -20,7 +20,7 @@
 
 .header-new > h3 {
   text-align: left;
-  margin: auto;  
+  margin: auto;
   padding: .5em;
   padding-left: 2em;
   font-size: 20px;
@@ -67,7 +67,7 @@
 }
 
 .details-container-new {
-    flex: 2;
+  flex: 2;
 }
 
 .avatar-container-new {
@@ -229,7 +229,7 @@ hr.fancy-line, hr.fancy-line:before {
   width: 80px;
   background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
   align-items: center;
-  
+
   background-repeat: no-repeat;
   background-size:2900%;
   background-position: right;

@@ -1,0 +1,144 @@
+.feed-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-panel {
+	flex: 1;
+	background-color: #f5f5f5;
+	padding: 2%;
+}
+
+.random-recipe-class{
+	position: sticky;
+}
+
+.right-panel {
+	flex: 2.75;
+	padding: 2.5%;
+}
+
+.user3{
+	display: inline-block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 17px;
+
+  top:0px;
+  z-index: 100;
+}
+
+.random-recipe-api{
+	cursor:pointer;
+	transition: all 0.2s linear;
+}
+.random-recipe-api:hover{
+	transform: scale(1.025);
+}
+
+.my-profile-redirect{
+	padding-top: 5%;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 0.9;
+	/* padding-left: 15%; */
+}
+
+.my-profile-redirect-2{
+	color: #242424;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif;
+	font-size: 22px;
+}
+
+.user4{
+	display: inline-block;
+
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0px;
+
+  top:0px;
+  z-index: 100;
+}
+
+.post-card{
+	margin:0;
+	margin-top: 2%;
+	background-color: #F5F5F5;
+	width:100%;
+}
+
+.image-user-post{
+	padding-right: 0px;
+  padding-bottom: 15px;
+  padding-top: 13px;
+	cursor: pointer;
+}
+
+.post-textarea{
+	outline:none;
+	margin-top: 1%;
+	margin-bottom: 1.5%;
+	resize: none;
+	padding: 1%;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.25;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+.sendImage-user-post{
+  margin-top: 20px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	/* padding-left: 0px; */
+	/* margin-left: 5px; */
+}
+
+.sendImage-user-post:hover{
+	transform: scale(1.15);
+}
+
+.custom-file-input-2 {
+  color: transparent;
+  border: none;
+  outline: none;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+.custom-file-input-2::-webkit-file-upload-button {
+  visibility: hidden;
+  border: none;
+  outline: none;
+}
+.custom-file-input-2::before {
+  /* background-image: url("https://img.icons8.com/material/4ac144/256/user-male.png"); */
+  color: black;
+  display: none;
+	border: none;
+
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+
+  font-weight: 700;
+
+}
+
+.custom-file-input-2:hover{
+	transform: scale(1.08);
+	cursor: pointer;
+}

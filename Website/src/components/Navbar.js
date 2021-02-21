@@ -39,7 +39,7 @@ function Navbar()
 							<img src={logo1} alt="logo1"/>
 				      	</div>
 					</a>
-					
+
 					<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>RecipeBowl</Link>
 
 					<div className='menu-icon' onClick={handleClick}>
@@ -52,6 +52,20 @@ function Navbar()
 								Home
 							</Link>
 						</li>
+
+						{localStorage.getItem("loggedIn")==="true" ?
+							<li className='nav-item'>
+								<Link to='/feed' className='nav-links' onClick={closeMobileMenu}>
+									Feed
+								</Link>
+							</li> :
+
+							<li className='nav-item'>
+								<Link to='/sign_up' className='nav-links' onClick={closeMobileMenu}>
+									Feed
+								</Link>
+							</li>
+						}
 
 						<li className='nav-item'>
 							<Link to='/about' className='nav-links' onClick={closeMobileMenu}>
@@ -70,7 +84,7 @@ function Navbar()
 								<Link to='/sign_up' className='nav-links' onClick={closeMobileMenu}>
 									Dashboard
 								</Link>
-							</li>						
+							</li>
 						}
 
 

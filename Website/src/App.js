@@ -9,6 +9,7 @@ import Signup from './Login/src/App';
 import Dashboard from './Login/src/components/userPage/profile.js';
 import { FooterContainer } from './containers/footer';
 import Testimonials from "./components/testimonials";
+import Feed from './components/feed/feed.js';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 	}
 
 	return (
-		<div clasName='App-container'>
+		<div className='App-container'>
 			<Router>
 				<div>
 					<Navbar />
@@ -33,6 +34,7 @@ function App() {
 					<Route path='/about' exact component={About} />
 					<Route path='/sign_up' exact component={Signup} />
 					<Route path='/dashboard' exact component={Dashboard} />
+					<Route path='/feed' exact component={Feed} />
 				</Switch>
 				</div>
 

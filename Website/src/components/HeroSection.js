@@ -143,7 +143,6 @@ function HeroSection()
      {
        console.log(cuisine);
        if(cuisine === "blank" || cuisine === ""){
-         setIngInvalidInput(true);
        }
        else{
         setIngInvalidInput(false);
