@@ -1,0 +1,21 @@
+server {
+    listen 80;
+    root F:\Udemy Web Dev\recipe_bowl\build;
+    server_name _;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache";
+    }
+
+    location /static {
+        expires 1y;
+        add_header Cache-Control "public";
+    }
+
+    location /api {
+        include proxy_params;
+        proxy_pass http://localhost:5000;
+    }
+}

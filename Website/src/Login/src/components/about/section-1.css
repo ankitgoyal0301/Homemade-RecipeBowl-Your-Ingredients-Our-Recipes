@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:wght@500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+video {
+  object-fit: cover;
+  opacity: 0.85;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.new-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.website-name {
+  color: #fff;
+  font-size: 120px;
+  margin-top: -30px;
+  margin-bottom: 100px;
+  padding: -50px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
+.tagline{
+  color: #fff;
+  font-size: 70px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  padding: -50px;
+  padding-bottom: 30px;
+  font-family: 'Work Sans', sans-serif;
+}
