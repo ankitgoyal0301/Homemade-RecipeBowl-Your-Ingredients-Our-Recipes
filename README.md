@@ -5,14 +5,14 @@
 
 ### Developer Team:
 
-- Divyanshu Garg - 18103035
 - Ankit Goyal - 18103018
 - Krish Garg - 18103027
+- Divyanshu Garg - 18103035
 - Anish Agarwal - 18103039
 
 ## Documentation:
 
-[Homemade RecipeBowl - Documentation](https://docs.google.com/document/d/1m4HwRRv36_pwn7cS87VdmaX4Fl8op--G-5P0T7AZiQU/edit)
+[Homemade RecipeBowl - Documentation](https://drive.google.com/file/d/1rF9SbxljkF8EDAXWviv0STYPlrrwL4gI/view?usp=sharing)
 
 [ChefKoch Images - Dataset](https://drive.google.com/drive/folders/1uNk_TbVd__8W8HoXop1uI_SNFiRy03ip?usp=sharing)
 
@@ -30,9 +30,9 @@
 
 - Installing npm: $npm install -g create-react-app
 - Creating react project: $create-react-app \&lt;project\_name\_all\_in\_lower\_case\&gt;
-- Copy (by replacing) all the files in the &quot;Website Front End&quot; folder into the newly created react project folder.
+- Copy (by replacing) all the files in the &quot;Website&quot; folder into the newly created react project folder.
 - Run the backend server (given below) in a separate command prompt.
-- Activating the environment, in &quot;Website Front End\api&quot; folder: $venv\Scripts\activate
+- Activating the environment, in &quot;Website\api&quot; folder: $venv\Scripts\activate
 - Return to parent folder, i.e., react project folder: $cd ..
 - Running react project: $npm start
 
@@ -40,7 +40,7 @@
 
 #### In **&quot;Website Front End\api&quot;** folder:
 
-- Creating virtual environment, i.e. venv, : $python -m venv venv (replace already present venv folder in &quot;Website Front End\api&quot;, if prompted)
+- Creating virtual environment, i.e. venv, : $python -m venv venv (replace already present venv folder in &quot;Website\api&quot;, if prompted)
 - Activating environment : $venv\Scripts\activate
 - Running flask file: $flask run --no-debugger
 
@@ -49,7 +49,7 @@
 
 **BACKGROUND:**
 
-Most often, we get into a situation when we want to cook something delicious, however, we are short on ingredients at our home. It also creates a lot of confusion about what to cook with the available ingredients. Further, we might not have accessibility to more ingredients from the nearby market due to various reasons like non-availability or specifically the unprecedented times as Covid which has resulted in shutdowns. Finally, we are bound at home to make the best possible dish from leftover ingredients.
+Most often, we get into a situation when we want to cook something delicious, however, we are short on ingredients at our home. It also creates a lot of confusion about what to cook with the available ingredients. Further, we might not have accessibility to more ingredients from the nearby market due to various reasons like non-availability or specifically the unprecedented times as Covid which has resulted in shutdowns. Finally, we are bound at home to make the best possible dish from leftover ingredients. Our project aims to make a user aware of the various dishes which can be cooked from the available set of ingredients being input by a user.
 
 **MOTIVATION:**
 
@@ -57,27 +57,71 @@ Our project aims to make a user aware of the various dishes which can be cooked 
 
 In addition, this project would be a great platform for people to learn and expand their knowledge in the field of cooking. Moreover, it will help in exploring and spreading the taste of one region worldwide. It will also bring innovation to the art of cooking. Our motivation is not only restricted to these merits but also includes more information about nutrition for respective recipes. Nutrition and health being the most important aspects of one&#39;s life are also one of the most neglected areas. This project will also ensure that a user is aware of his/her food intake value and thus plan to explore and make healthier meals.
 
-**OBJECTIVE:**
+**What is Homemade RecipeBowl:**
 
-Our objective is to create an application that will assist an end-user to explore a variety of recipes with the available ingredients in one&#39;s kitchen. The steps to be followed are:
+We aim to make a user aware of the various dishes which can be cooked from available set of ingredients or an input image given by a user.
+Thus, systems like this never get their place in real life. We’ve developed a Recipe Generation model by applying Neural Network on it. The tools used for developing the project are Python, React, CSS, JavaScript & Flask.
+- A dynamic website incorporating machine learning techniques.
+- Search options:
+  - Search by Ingredients
+  - Search by food image
+  - Search by cuisine
+- Output: self generated recipes
+- It is a recipe generator system and not a recommender system!!!
+- An additional feature for sharing food related content in the form of posts.
 
-1. To explore various related datasets and perform data preprocessing in order to extract the desired attributes.
-2. To perform model training using Machine Learning or Deep Learning algorithms to find the best matching recipes corresponding to a given set of ingredients.
-3. To classify an input image of any dish and estimate its caloric value.
+**Problem Statement**
 
-**WORKPLAN:**
+A lot of times, we are in a situation when we want to cook something delicious but we are short on ingredients at our home and we are confused about what to cook with the ingredients we have. We might be in a situation where either we don’t have any means to get ingredients from the market, or we are bound to stay at home. Just as we did in this COVID-19 pandemic situation, where we stayed in our homes for months in complete lockdown. We feel helpless in such a situation.
 
-![Flow Chart 1](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Flow%20chart%201.png)
+In such a situation we keep on searching for recipes that match our ingredients online, but hardly get any results and that too takes a lot of time, and ultimately we return to our kitchen disappointed. There’s a need for a system that could actually take ingredients as the input and give us the list of most matching recipes that could help us make delicious food at our homes.
+- What already exists:
+  - Recipes-by-name search system
+  - Recipes recommender search system
+- Existing Problems:
+  - No Recipes-by-Ingredients search system
+  - No Recipes-by-Images search system
+  - No Ingredients-Recipe and Image-Recipe datasets.
+- Our Contribution:
+  - Scraped Ingredients-Recipe and Image-Recipe datasets.
+  - Training Image-to recipes model using Convolutional Neural Network
+  - Recipe generator using character-level RNN text generation ML technique.
 
-Fetching Recipes
+Following is our approach divided into different phases about the solution of the problem.
 
-![Flow Chart 2](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Flow%20chart%202.png)
+## WEB APPLICATION:
 
-Finding Caloric values of Recipes from images
+**Website Homepage:**
 
-**DELIVERABLES:**
+The website first opens up the homepage, which is the central point of use for the user. There are three options available here: Recipe by Ingredients, Recipe by Image & Recipe by Cuisine.
 
-The deliverable will be an application to assist an end-user in order to explore a variety of recipes with the available ingredients in one&#39;s kitchen along with information upon their nutritional value.
+**Login:**
+
+The user can login with his Username and Password.
+
+Also, they can sign up or register if they don’t have an account already.
+
+**Dashboard:**
+
+After user login, we can open the dashboard. Here the user can change the profile picture, change password, change bio, and view his/her favorite Recipes and his/her posts.
+
+Feed for Sharing your Ideas, recipes and many more in the form of Posts
+Now here’s something which made our project even more interesting. As you all must have seen feed in all social media platforms, we thought why not to add the same in our website, but in a different context. Here, people can share food related memes, recipes, images, and can also comment on one-another's post. A Random recipe is also shown in the feed using an API.
+
+**Prediction Time:**
+
+Now let’s give ingredients input to the website and get the generated recipes as output.
+
+After getting the desired results:
+
+## DISCUSSION:
+
+Through this project, we have made a system that has the potential to generate recipes out of the given set of ingredients. Also, this project has the potential to get implemented in different parts of the world helping users with making delicious recipes at their disposal.
+
+Also, the image to recipe feature can be widely used to help generate the recipes of the most delicious looking recipe images.
+
+Also, As you all must have seen feed in all social media platforms, we thought why not to add the same in our website, but in a different context. Here, people can share food related memes, recipes, images, and can also comment on one-another's post.
+
 
 ## Timelines:
 
@@ -129,7 +173,7 @@ The deliverable will be an application to assist an end-user in order to explore
 - Looked up for the existing datasets on the internet.
 - Found one dataset by MIT, but the access was not public, and the link where the request for the grant was to be made, wasn&#39;t accessible.
 - Could not find any other dataset related to the Recipe name along with ingredients and instructions.
-- Created the Github Repository for the project - [Homemade Recipebowl](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes) (Currently the repository is private)
+- Created the Github Repository for the project - [Homemade Recipebowl](https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes)
 
 ---
 
@@ -237,25 +281,47 @@ VERY LARGE FLUCTUATIONS IN THE LOSS OVER CONSECUTIVE EPOCHS, SO NOT PREFERABLE
 
 ---
 
-**Week 13** : (2 November 2020 - 8 November 2020)
+**Week 13-14** : (2 November 2020 - 15 November 2020)
 
-**Further Developed the RecipeBowl Website:**
+**Added features like Login page and user dashboard:**
 
 - Developed the website’s front end using the React framework.
-- Added additional features/components like login page, user dashboard, favourite recipe feature, about us page.
+- Added additional features like login page & user dashboard.
 - Integrated front end components with each other.
-- Integrated front end with image-to-recipe feature and cuisine-to-recipe feature.
+- Integrated front end with image-to-recipe and cuisine-to-recipe feature.
 
 ---
+
+**Week 15-16** : (16 November 2020 - 29 November 2020)
+
+**Added User Favourite Recipes feature and fixed some minor bugs:**
+
+- Developed the website’s front end using the React framework.
+- Added features like favourite recipe bookmark and about us section.
+- Fixed minor bugs like automatic page refreshing in Image-to-recipe feature, state update in the React component and many more.
+
+---
+
+**Week 17-18** : (30 November 2020 - 13 December 2020)
+
+**Developed the feed feature which contains self and other user’s posts:**
+
+- Created a left panel having shortcuts to jump to components like My Posts, My Favorites, My Dashboard and Change Password.
+- Designed the right panel of the feed which contains the posts of the other users along with the current user.
+- Added the facility to upload a relevant image along with the text.
+- Added a feature to comment on the posts.
+
+---
+
 ## Future Plan
 
 **CURRENT BUGS / CHALLENGES:**
 
-- The Ingredients-to-Recipe generator sometimes produces irrelevant outputs, due to constraint on dataset size.
+- The Ingredients-to-Recipe generator produces some irrelevant outputs sometimes.
 
 **FURTHER SCOPE:**
 
-- Expanding our dataset and improving the text generation model.
-- The Ingredients-to-recipe model can be further extended to image generation corresponding to the recipe generated.
-- A Post’s feed can be added to the website where people can add their recipes in the form of posts.
+- Getting access of MIT dataset and training the Ingredients-to-Recipe generator to improve it further.
+- The Post’s feed can be further developed to recommend posts based on user’s choices.
 - Discussion forum for Q/A among the users.
+- Peer to peer direct chat communication.
