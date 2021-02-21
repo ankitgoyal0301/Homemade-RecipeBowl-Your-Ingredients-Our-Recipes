@@ -51,6 +51,8 @@
 
 Most often, we get into a situation when we want to cook something delicious, however, we are short on ingredients at our home. It also creates a lot of confusion about what to cook with the available ingredients. Further, we might not have accessibility to more ingredients from the nearby market due to various reasons like non-availability or specifically the unprecedented times as Covid which has resulted in shutdowns. Finally, we are bound at home to make the best possible dish from leftover ingredients. Our project aims to make a user aware of the various dishes which can be cooked from the available set of ingredients being input by a user.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Cook.jpg" width="50%" height="50%">
+
 **MOTIVATION:**
 
 Our project aims to make a user aware of the various dishes which can be cooked from the available set of ingredients being input by a user. There may be times when a person desires new, delicious, healthy or maybe presentable cuisines and above all, it necessarily is homemade as the possibilities to get one from outside might be restricted like in the recent pandemic period (Covid-19). An optimal solution to this could be the design of an application wherein the user will be capable of exploring and preparing several new dishes which include those ingredients. Therefore, a system could be designed that could actually take ingredients as the input and generates the best-matched recipe from an exhaustive list of most matching recipes.
@@ -58,6 +60,8 @@ Our project aims to make a user aware of the various dishes which can be cooked 
 In addition, this project would be a great platform for people to learn and expand their knowledge in the field of cooking. Moreover, it will help in exploring and spreading the taste of one region worldwide. It will also bring innovation to the art of cooking. Our motivation is not only restricted to these merits but also includes more information about nutrition for respective recipes. Nutrition and health being the most important aspects of one&#39;s life are also one of the most neglected areas. This project will also ensure that a user is aware of his/her food intake value and thus plan to explore and make healthier meals.
 
 **What is Homemade RecipeBowl:**
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Homemade-Recipebowl.png" width="35%" height="35%">
 
 We aim to make a user aware of the various dishes which can be cooked from available set of ingredients or an input image given by a user.
 Thus, systems like this never get their place in real life. We’ve developed a Recipe Generation model by applying Neural Network on it. The tools used for developing the project are Python, React, CSS, JavaScript & Flask.
@@ -74,6 +78,8 @@ Thus, systems like this never get their place in real life. We’ve developed a 
 
 A lot of times, we are in a situation when we want to cook something delicious but we are short on ingredients at our home and we are confused about what to cook with the ingredients we have. We might be in a situation where either we don’t have any means to get ingredients from the market, or we are bound to stay at home. Just as we did in this COVID-19 pandemic situation, where we stayed in our homes for months in complete lockdown. We feel helpless in such a situation.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Cook-confused.jpg" width="20%" height="20%">
+
 In such a situation we keep on searching for recipes that match our ingredients online, but hardly get any results and that too takes a lot of time, and ultimately we return to our kitchen disappointed. There’s a need for a system that could actually take ingredients as the input and give us the list of most matching recipes that could help us make delicious food at our homes.
 - What already exists:
   - Recipes-by-name search system
@@ -89,30 +95,54 @@ In such a situation we keep on searching for recipes that match our ingredients 
 
 Following is our approach divided into different phases about the solution of the problem.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Workflow.PNG">
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Flow%20chart%201.png">
+
 ## WEB APPLICATION:
 
 **Website Homepage:**
 
 The website first opens up the homepage, which is the central point of use for the user. There are three options available here: Recipe by Ingredients, Recipe by Image & Recipe by Cuisine.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Homepage1.png">
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/Homepage2.png">
+
 **Login:**
 
 The user can login with his Username and Password.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/login1.png">
+
 Also, they can sign up or register if they don’t have an account already.
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/login2.png">
 
 **Dashboard:**
 
 After user login, we can open the dashboard. Here the user can change the profile picture, change password, change bio, and view his/her favorite Recipes and his/her posts.
 
-Feed for Sharing your Ideas, recipes and many more in the form of Posts
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/dashboard1.png">
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/dashboard2.png">
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/dashboard3.png">
+
+**Feed for Sharing your Ideas, recipes and many more in the form of Posts:**
+
 Now here’s something which made our project even more interesting. As you all must have seen feed in all social media platforms, we thought why not to add the same in our website, but in a different context. Here, people can share food related memes, recipes, images, and can also comment on one-another's post. A Random recipe is also shown in the feed using an API.
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/feed1.png">
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/feed2.png">
 
 **Prediction Time:**
 
 Now let’s give ingredients input to the website and get the generated recipes as output.
 
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/prediction-time.png">
+
 After getting the desired results:
+
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/prediction-time2.png">
+<img src="https://github.com/ankitgoyal0301/Homemade-RecipeBowl-Your-Ingredients-Our-Recipes/blob/master/Documentation/Images/prediction-time3.png">
 
 ## DISCUSSION:
 
